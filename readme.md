@@ -21,6 +21,14 @@ pip install -r requirements.txt
 python3 app.py
 ```
 
+## Freezing Requirements
+
+Please run the following command to freeze requirements in a consistent manner, when adding new modules to the project.
+
+```shell
+pip freeze | LC_COLLATE=C sort > requirements.txt
+```
+
 ## Routes
 
 The following routes are supported:
