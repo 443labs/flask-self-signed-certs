@@ -1,0 +1,6 @@
+data/
+venv/
+.idea
+.vscode
+.python-version
+__pycache__
