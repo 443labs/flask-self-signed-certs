@@ -1,11 +1,8 @@
 import datetime
-import logging
+import json
 import socket
 
 from flask import Flask, jsonify, request
-
-logger = logging.getLogger(__name__)
-logger.setLevel('INFO')
 
 app = Flask(__name__)
 
@@ -21,7 +18,7 @@ def default():
     if request.method == 'POST':
         data = request.get_json() or data # default to our sample payload if no data was presented
 
-    print()
+    print('Responding with JSON...', json.dumps(data, indent=2, sort_keys=True))
     return jsonify(data), 200
 
 
